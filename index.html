@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body dir="rtl" class="light">
+    
+    <header class="header">
+        <h1 class="logo">MHM</h1>
+
+        <div class="menu">
+            <i class="fas fa-bars"></i>
+            <ul class="menu-ul">
+                <li class="active"><a href="index.html">صفحه اصلی</a></li>
+                <li class="admin-dashboard"><a>پنل مدیریت</a></li>
+                <li>
+                    <a>سبد خرید</a>
+                    <span class="cart-counter">0</span>
+                </li>
+                <li class="close-menu">
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="products-section"></section>
+
+    <section class="login-page">
+        <div class="login-box">
+            <form action="" class="login-form">
+                <h2 class="login-title">ورود به پنل مدیریت</h2>
+                <input type="text" class="user-input">
+                <div>
+                    <i class="far fa-eye"></i>
+                    <i class="far fa-eye-slash"></i>
+                    <input type="password" class="pass-input">
+                </div>
+                <div class="login-buttons">
+                    <input type="submit" value="ورود" class="submit-login">
+                    <button class="close-login-btn">بستن</button>
+                </div>
+                <div class="login-message-box"></div>
+            </form>
+        </div>
+    </section>
+
+<script src="functions/uuid.js"></script>
+<script src="functions/variables.js"></script>
+<script src="functions/app.js"></script>
+</body>
+</html>

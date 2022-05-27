@@ -1,0 +1,330 @@
+/* Font & Theme */
+@font-face {
+    font-family: 'Vazir';
+    src: url(../fonts/Vazir.ttf);
+}
+body.light{
+    --main-text-color: #8a009c;
+    --main-bg-color: #fcfcfc;
+    --main-white:#ffffff;
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    --login-bg-cover: rgba(0, 0, 0, 0.35)
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Vazir';
+}
+
+/* Header Start */
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--main-box-shadow);
+    background: var(--main-bg-color);
+    padding: 0 30px;
+}
+.header .logo{
+    font-size: 35px;
+    font-weight: 600;
+    user-select: none;
+    color: var(--main-text-color);
+}
+.header .menu{
+    width: 34%;
+}
+.header .menu .fa-bars{
+    display: none;
+}
+.header .menu .menu-ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.15s linear;
+}
+.header .menu .menu-ul li.active{
+    padding: 5px 8px;
+    background: var(--main-text-color);
+    border-radius: 10px;
+}
+.header .menu .menu-ul li.active a{
+    color: var(--main-white);
+}
+.header .menu .menu-ul li{
+    list-style: none;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    position: relative;
+}
+.header .menu .menu-ul li:hover{
+    transform: translateY(-1px);
+}
+.header .menu .menu-ul li a{
+    text-decoration: none;
+    user-select: none;
+    color: var(--main-text-color);
+}
+.header .menu .menu-ul li .cart-counter {
+    color: var(--main-white);
+    padding: 0px 6px;
+    font-size: 13px;
+    font-weight: 900;
+    border-radius: 25px;
+    background: var(--main-text-color);
+    position: absolute;
+    top: -11px;
+    left: -11px;
+}
+/* Header End */
+
+/* Products Section Start */
+.products-section{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.products-section .product-box{
+    width: 350px;
+    background: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 30px 0;
+    box-shadow: var(--main-box-shadow);
+    border-radius: 8px;
+}
+.products-section .product-box .product-img{
+    width: 80%;
+}
+.products-section .product-box .product-title{
+    margin: 10px 0;
+}
+.products-section .product-box .product-price{
+    margin-bottom: 10px;
+}
+.products-section .product-box .add-to-card{
+    padding: 3px 7px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 5px;
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.products-section .product-box .add-to-card:hover{
+    transform: scale(0.98);
+}
+
+.login-page{
+    position: absolute;
+    top: -700px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s linear;
+}
+.login-page .login-box{
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-page .login-box .login-form{
+    width: 98%;
+    height: 98%;
+    border-radius: 10px;
+    border: 1px solid var(--main-text-color);
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.login-page .login-box .login-form .login-title{
+    margin-bottom: 50px;
+}
+.login-page .login-box .login-form div{
+    width: 60%;
+    position: relative;
+}
+.login-page .login-box .login-form .user-input,
+.login-page .login-box .login-form div .pass-input{
+    direction: ltr;
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid var(--main-text-color);
+    padding: 0 10px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    caret-color: var(--main-text-color);
+    color: var(--main-text-color);
+}
+.login-page .login-box .login-form div .pass-input{
+    width: 100%;
+}
+.login-page .login-box .login-form .fa-eye{
+    position: absolute;
+    cursor: pointer;
+    color: var(--main-text-color);
+}
+.login-page .login-box .login-form .fa-eye-slash{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    color: var(--main-text-color);
+}
+.login-page .login-box .login-form .login-buttons{
+    width: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.login-page .login-box .login-form .login-buttons .submit-login,
+.login-page .login-box .login-form .login-buttons .close-login-btn{
+    width: 80px;
+    padding: 3px 14px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.login-page .login-box .login-form .login-buttons .submit-login:hover,
+.login-page .login-box .login-form .login-buttons .close-login-btn:hover{
+    transform: scale(0.98);
+}
+.login-page .login-box .login-form .login-message-box{
+    width: 60%;
+    height: 50px;
+    border-radius: 7px;
+    opacity: 0;
+    padding: 8px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s linear;
+}
+.login-page .login-box .login-form .login-message-box .login-message{
+    color: var(--main-white);
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1100px){
+    .header .menu{
+        width: 46%;
+    }
+    .products-section{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media only screen and (max-width: 800px){
+    .header .menu{
+        width: 60%;
+    }
+    .products-section .product-box{
+        width: 280px;
+    }
+    .products-section .product-box .product-img{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .header .menu .fa-bars{
+        font-size: 25px;
+        color: var(--main-text-color);
+        display: block;
+    }
+    .header .menu .menu-ul{
+        width: 180px;
+        height: 250px;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: -260px;
+        right: 0;
+        border-radius: 0 0 0 15px;
+        background: var(--main-bg-color);
+        box-shadow: var(--main-box-shadow);
+    }
+    .header .menu .menu-ul li{
+        margin: 20px 0;
+    }
+    .header .menu .menu-ul li .close-menu{
+        width: 100%;
+    }
+    .header .menu .menu-ul .close-menu div{
+        width: 25px;
+        height: 3px;
+        background: var(--main-text-color);
+        transform: rotate(45deg);
+        border-radius: 5px;
+    }
+    .header .menu .menu-ul .close-menu div::after{
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: var(--main-text-color);
+        transform: rotate(-90deg);
+        border-radius: 5px;
+    }
+    .products-section{
+        grid-template-columns: 1fr;
+    }
+    .products-section .product-box{
+        width: 300px;
+    }
+    .login-page .login-box{
+        width: 310px;
+        height: 400px;
+    }
+    .login-page .login-box .login-form .login-title{
+        font-size: 20px;
+    }
+    .login-page .login-box .login-form .user-input,
+    .login-page .login-box .login-form div{
+        width: 75%;
+    }
+    .login-page .login-box .login-form .login-buttons .submit-login,
+    .login-page .login-box .login-form .login-buttons .close-login-btn{
+        width: 70px;
+        font-size: 15px;
+    }
+    .login-page .login-box .login-form .login-message-box{
+        width: 70%;
+    }
+    .login-page .login-box .login-form .login-message-box .login-message{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 350px){
+    .products-section .product-box{
+        width: 250px;
+    }
+}
