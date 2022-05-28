@@ -103,3 +103,5 @@ loginForm.addEventListener('submit',(e)=>{
         loginMessage.textContent = 'نام کاربری یا رمز عبور اشتباه است.'
     }
 })
+
+// --Admin panel - Upload img--

@@ -7,6 +7,7 @@ body.light{
     --main-text-color: #8a009c;
     --main-bg-color: #fcfcfc;
     --main-white:#ffffff;
+    --deactive-color: #999999;
     --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     --login-bg-cover: rgba(0, 0, 0, 0.35)
 }
@@ -172,12 +173,17 @@ body.light{
     width: 60%;
     height: 30px;
     border: none;
-    border-bottom: 1px solid var(--main-text-color);
+    border-bottom: 1px solid var(--deactive-color);
     padding: 0 10px;
     margin-bottom: 50px;
     font-size: 16px;
     caret-color: var(--main-text-color);
     color: var(--main-text-color);
+    transition: all 0.1s linear;
+}
+.login-page .login-box .login-form .user-input:focus,
+.login-page .login-box .login-form div .pass-input:focus{
+    border-bottom: 1px solid var(--main-text-color);
 }
 .login-page .login-box .login-form div .pass-input{
     width: 100%;
@@ -231,6 +237,81 @@ body.light{
     color: var(--main-white);
     font-size: 15px;
     text-align: center;
+}
+
+/* --Admin panel-- */
+.admin-panel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.admin-panel form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.admin-panel form .product-name-price{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-panel form .product-name-price .product-name-input,
+.admin-panel form .product-name-price .product-price-input{
+    width: 45%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid var(--deactive-color);
+    padding: 0 10px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    caret-color: var(--main-text-color);
+    color: var(--main-text-color);
+    transition: all 0.1s linear;
+}
+.admin-panel form .product-name-price .product-name-input:focus,
+.admin-panel form .product-name-price .product-price-input:focus{
+    border-bottom: 1px solid var(--main-text-color);
+}
+.admin-panel form .product-name-price .product-name-input:focus::placeholder,
+.admin-panel form .product-name-price .product-price-input:focus::placeholder{
+    color: var(--main-text-color);
+}
+.admin-panel form .product-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-panel form .product-img .uploading-area{
+    width: 60%;
+    height: 200px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.admin-panel form .product-img .uploading-area .product-img-input{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.admin-panel form .product-img .uploading-area .uploading-area-title{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    text-align: center;
+    color: var(--main-text-color);
+    z-index: -10;
+    user-select: none;
 }
 
 /* Media Query */
