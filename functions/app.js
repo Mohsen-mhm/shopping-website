@@ -95,7 +95,7 @@ loginForm.addEventListener('submit',(e)=>{
         loginMessageBox.style.opacity = '1'
         loginMessage.textContent = 'با موفقیت وارد شدید.'
         setTimeout(()=>{
-            location.href = './admin-panel.html'
+            location.href = './pages/admin-panel.html'
         },400)
     }else{
         loginMessageBox.style.background = '#ad0000'
@@ -103,5 +103,3 @@ loginForm.addEventListener('submit',(e)=>{
         loginMessage.textContent = 'نام کاربری یا رمز عبور اشتباه است.'
     }
 })
-
-// --Admin panel - Upload img--
