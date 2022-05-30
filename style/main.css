@@ -313,6 +313,36 @@ body.light{
     z-index: -10;
     user-select: none;
 }
+.admin-panel form .product-img .uploading-area .preview-img{
+    max-width: 80%;
+    max-height: 110px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    z-index: -10;
+}
+.admin-panel form .form-submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.admin-panel form .form-submit input[type='submit']{
+    padding: 3px 14px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.admin-panel form .form-submit input[type='submit']:hover{
+    transform: scale(0.98);
+}
 
 /* Media Query */
 @media only screen and (max-width: 1100px){
